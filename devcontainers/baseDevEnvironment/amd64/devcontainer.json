@@ -1,0 +1,10 @@
+{
+  "image": "rytor/basedevcontainer:amd64",
+
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  },
+  "forwardPorts": [3000]
+}
