@@ -1,6 +1,10 @@
-FROM ubuntu:latest
+FROM ubuntu:22.04 as base
 
 ENV DEBIAN_FRONTEND=noninteractive
+
+# Create a user and group with a static UID and GID
+RUN groupadd -r dev -g 10001 && \
+    useradd -r -u 10001 -g dev dev
 
 # get latest security updates
 RUN apt update && \
@@ -48,3 +52,5 @@ RUN apt install neovim -y
 # install tmux
 RUN apt-get update && \
 	apt-get install tmux -y
+
+USER dev
