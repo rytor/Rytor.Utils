@@ -1,6 +1,16 @@
 {
-  "image": "rytor/basedevcontainer:amd64",
-
+  "image": "ubuntu:22.04",
+  "features": {
+    "ghcr.io/devcontainers/features/dotnet:2": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers-contrib/features/vscode-cli:1": {},
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers-contrib/features/neovim-apt-get:1": {},
+    "ghcr.io/devcontainers-contrib/features/tmux-apt-get:1": {}
+  }, 
   "customizations": {
     "vscode": {
       "extensions": ["ms-dotnettools.csdevkit",
